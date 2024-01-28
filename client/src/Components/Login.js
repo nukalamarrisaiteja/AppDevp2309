@@ -32,7 +32,7 @@ function Login() {
       method:"POST",
       body:dataToSend,  };
 
-  let JSONData=await fetch("http://localhost:4567/validateToken",reqOption);
+  let JSONData=await fetch("/validateToken",reqOption);
   let JSOData=await JSONData.json();
   console.log(JSOData)
 
@@ -60,7 +60,7 @@ if(JSOData.status=="failure"){
             method:"POST",
             body:dataToSend,  };
 
-        let JSONData=await fetch("http://localhost:4567/login",reqOption);
+        let JSONData=await fetch("/login",reqOption);
         let JSOData=await JSONData.json();
         console.log(JSOData)
 
